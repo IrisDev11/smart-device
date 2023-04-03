@@ -1,0 +1,58 @@
+.address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 500px;
+  margin-top: 15px;
+
+  @include vp-1279 {
+    width: 456px;
+  }
+
+  @include vp-1023 {
+    width: 95px;
+    margin-top: 10px;
+  }
+
+  @include vp-769 {
+    width: 100px;
+    padding-right: 5px;
+    margin-top: 5px;
+  }
+}
+
+.address__link {
+  display: flex;
+  width: 50%;
+  margin-bottom: 10px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-default-white;
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+
+  @include active {
+    opacity: 0.3;
+  }
+
+  @include vp-1023 {
+    width: auto;
+  }
+}
+
+.address__link svg {
+  margin-right: 15px;
+}
+
+.address__content {
+  padding-right: 6px;
+
+  @include vp-1023 {
+    display: none;
+  }
+}

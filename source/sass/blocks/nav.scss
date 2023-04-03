@@ -1,0 +1,90 @@
+.nav {
+  @include vp-769 {
+    padding: 0 25px 20px;
+  }
+}
+
+.nav__list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 8px;
+  column-gap: 49px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: ($vp-1024 - 24px)) {
+    grid-template-columns: auto;
+  }
+}
+
+.nav__title {
+  margin: 0 0 20px 0;
+
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $color-default-white;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  color: $color-transparent;
+  text-decoration: none;
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  @include focus {
+    outline: none;
+    opacity: 0.6;
+    border-bottom: 1px solid $color-alice-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.nav__item--montage {
+  order: 5;
+
+  @media (max-width: ($vp-1024 - 24px)) {
+    order: 4;
+  }
+}
+
+.nav__item--products {
+  order: 2;
+}
+
+.nav__item--production {
+  order: 3;
+}
+
+.nav__item--contacts {
+  order: 4;
+
+  @media (max-width: ($vp-1024 - 24px)) {
+    order: 7;
+  }
+}
+
+.nav__item--delivery {
+  order: 2;
+
+  @media (max-width: ($vp-1024 - 24px)) {
+    order: 6;
+  }
+}
+
+.nav__item--accessories {
+  @media (max-width: ($vp-1024 - 24px)) {
+    order: 5;
+  }
+}

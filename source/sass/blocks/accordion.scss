@@ -1,0 +1,73 @@
+.accordion {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+
+  &__element.is-active > &__button {
+    opacity: 0.5;
+  }
+
+  &__toogle {
+    padding-top: 4px;
+  }
+
+  &__button {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    font-family: $ff-roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: $color-default-white;
+    text-transform: uppercase;
+    text-align: left;
+
+    background-color: transparent;
+    border: none;
+
+    @include vp-769 {
+      padding: 22px 25px 0;
+      border-top: 1px solid $color-transparent-grey;
+      margin-bottom: 17px;
+
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 27px;
+        right: 25px;
+        width: 15px;
+        height: 1px;
+        background-color: $color-alice-grey;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 27px;
+        right: 25px;
+        width: 15px;
+        height: 1px;
+        transform: rotate(90deg);
+        background-color: $color-alice-grey;
+      }
+    }
+  }
+
+  @include vp-1023 {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  @include vp-769 {
+    flex-direction: column;
+    border-bottom: 1px solid $color-transparent-grey;
+    padding: 0;
+  }
+}

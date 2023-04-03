@@ -1,0 +1,60 @@
+.contacts {
+  max-width: 345px;
+
+  @include vp-1023 {
+    max-width: 320px;
+  }
+
+  @include vp-769 {
+    padding: 0 25px 14px;
+  }
+}
+
+.contacts p {
+  margin: 2px 0 5px;
+  color: $color-transparent;
+
+  @include vp-769 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.contacts__tel-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.contacts__tel-item {
+  margin-bottom: 5px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: $color-transparent;
+
+  cursor: pointer;
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  @include focus {
+    outline: none;
+    opacity: 0.6;
+    border-bottom: 1px solid $color-alice-blue;
+  }
+
+  @include active {
+    opacity: 0.3;
+  }
+
+  @include vp-769 {
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

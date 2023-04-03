@@ -1,0 +1,113 @@
+.about-company {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8.2%;
+  max-width: 1220px;
+  margin: 0 auto 100px auto;
+
+  @include vp-1439 {
+    padding: 0 30px;
+  }
+
+  @include vp-1023 {
+    gap: 4.2%;
+    margin-bottom: 80px;
+    padding: 0 54px 0 46px;
+  }
+
+  @include vp-769 {
+    display: block;
+    padding: 0 25px;
+  }
+}
+
+.about-company__wrapper-right {
+  grid-column: 2 / -1;
+}
+
+.about-company h2 {
+  margin: 0 0 12px 0;
+
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  @include vp-769 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.about-company p {
+  margin: 0 0 20px 0;
+
+  @include vp-769 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about-company__text-mobile-hidden {
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.about-company__text-mobile-hidden--opened {
+  @include vp-769 {
+    display: block;
+  }
+}
+
+.about-company__text-hidden {
+  display: none;
+}
+
+.about-company__text-hidden--opened {
+  display: block;
+}
+
+.about-company__button {
+  justify-content: center;
+  min-width: 180px;
+  margin-top: 20px;
+  padding: 13px 30px 14px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+
+  @include focus {
+    color: $color-alice-blue;
+    background-color: $color-deep-sky-blue;
+  }
+
+  @include vp-1023 {
+    margin-top: -5px;
+  }
+
+  @include vp-769 {
+    min-width: 160px;
+    margin-top: -11px;
+    padding: 10px 10px 9px;
+
+    line-height: 14px;
+  }
+}
+
+.about-company picture {
+  display: block;
+  grid-column: 1 / 2;
+  width: 150px;
+
+  @include vp-1023 {
+    margin-top: 4px;
+    margin-left: 0;
+  }
+
+  @include vp-769 {
+    display: none;
+  }
+}

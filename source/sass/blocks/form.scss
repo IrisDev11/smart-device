@@ -1,0 +1,189 @@
+.form__wrapper h2 {
+  margin: 0 0 5px 0;
+
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: $color-default-white;
+}
+
+.form__wrapper p {
+  margin: 0 0 38px 0;
+
+  color: $color-default-white;
+}
+
+.form__input {
+  position: relative;
+}
+
+.form__input input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 13px 16px 15px 15px;
+
+  font-family: $ff-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-black-pearl;
+
+  background-color: $color-transparent-blue;
+  border: none;
+  border-radius: 3px;
+
+  @include hover {
+    opacity: 0.8;
+  }
+}
+
+.form__input input::placeholder {
+  font-family: $ff-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+}
+
+.form__textarea textarea {
+  width: 100%;
+  min-height: 155px;
+  margin-bottom: 19px;
+  padding: 24px 16px;
+
+  font-family: $ff-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-black-pearl;
+
+  background-color: $color-transparent-blue;
+  border: none;
+  border-radius: 3px;
+
+  @include hover {
+    opacity: 0.6;
+  }
+}
+
+.form__textarea textarea::placeholder {
+  font-family: $ff-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+}
+
+.form__button {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 14px 15px 12px 15px;
+
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+
+  background-color: $color-default-black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+
+  @include focus {
+    border: 1px solid $color-alice-blue;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
+}
+
+.form__checkbox-approval {
+  padding-left: 34px;
+}
+
+.form__checkbox-approval label {
+  position: relative;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-transparent-white;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -1px;
+    left: -25px;
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -1px;
+    left: -25px;
+    display: none;
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../../img/svg/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-size: 9px 6px;
+    border-radius: 2px;
+  }
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
+}
+
+.form__input .input-message,
+.form__checkbox-approval .input-message {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 5px;
+
+  background-color: $color-transparent-white;
+  border-radius: 3px;
+}
+
+.form__checkbox-approval .input-message {
+  left: 40px;
+  bottom: 7px;
+}
+
+.form__input .input-message.is-invalid,
+.form__checkbox-approval .input-message.is-invalid {
+  font-family: $ff-roboto;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: lowercase;
+  color: #ff0000;
+}
+
+.form__checkbox-approval input:checked + label::before {
+  display: block;
+}
+
+.form__checkbox-approval input:focus ~ label {
+  opacity: 0.6;
+  border-bottom: 1px solid $color-alice-blue;
+}

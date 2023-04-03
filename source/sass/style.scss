@@ -1,0 +1,36 @@
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+
+// Global
+// ---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+// Blocks
+// ---------------------------------
+
+@import "blocks/btn";
+@import "blocks/modal";
+@import "blocks/header";
+@import "blocks/address";
+@import "blocks/promo";
+@import "blocks/features";
+@import "blocks/about-company";
+@import "blocks/products";
+@import "blocks/form";
+@import "blocks/feedback";
+@import "blocks/footer";
+@import "blocks/social";
+@import "blocks/accordion";
+@import "blocks/data-accordion";
+@import "blocks/nav";
+@import "blocks/contacts";
+
+// ---------------------------------
