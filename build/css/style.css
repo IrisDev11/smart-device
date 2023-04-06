@@ -1439,7 +1439,7 @@ button,
   left: -160px;
   width: 1265px;
   height: 950px;
-  background-image: url("../../img/shadow-feedback.svg");
+  background-image: url("../img/shadow-feedback.svg");
   background-repeat: no-repeat;
   background-size: 1265px 950px;
 }
