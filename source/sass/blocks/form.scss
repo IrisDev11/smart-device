@@ -154,8 +154,7 @@
   }
 }
 
-.form__input .input-message,
-.form__checkbox-approval .input-message {
+.form__input .input-message {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -165,13 +164,7 @@
   border-radius: 3px;
 }
 
-.form__checkbox-approval .input-message {
-  left: 40px;
-  bottom: 7px;
-}
-
-.form__input .input-message.is-invalid,
-.form__checkbox-approval .input-message.is-invalid {
+.form__input .input-message.is-invalid {
   font-family: $ff-roboto;
   font-size: 16px;
   line-height: 16px;

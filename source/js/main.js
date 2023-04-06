@@ -1,10 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {switchesHiddenText} from './modules/about-company-switch-text';
 import {initSmothScroll} from './modules/smoth-scroll';
 import {initFocus} from './modules/init-focus';
+import {validateInputPhone} from './modules/validate-input-phone';
 
 // ---------------------------------
 
@@ -27,10 +27,11 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initSmothScroll();
     initFocus();
+    validateInputPhone();
 
-    const form = new Form();
-    window.form = form;
-    form.init();
+    // const form = new Form();
+    // window.form = form;
+    // form.init();
   });
 });
 
