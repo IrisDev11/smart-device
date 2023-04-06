@@ -6,7 +6,6 @@ const feedbackPhone = document.querySelector('.js-feedback-phone');
 const validateInputPhone = () => {
   initPhoneInput(modalPhone);
   initPhoneInput(feedbackPhone);
-
 };
 
 export {validateInputPhone};

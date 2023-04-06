@@ -69,10 +69,10 @@ const onPhoneInputBlur = ({target}) => {
     if (!parent.hasAttribute('data-required')) {
       parent.classList.remove('is-valid');
       parent.classList.remove('is-invalid');
-      // const parentMessage = parent.querySelector('.input-message');
-      // // if (parentMessage) {
-      // //   parentMessage.remove();
-      // // }
+      const parentMessage = parent.querySelector('.input-message');
+      if (parentMessage) {
+        parentMessage.remove();
+      }
     }
     parent.classList.remove('not-empty');
     target.removeEventListener('input', onPhoneInputInput);
