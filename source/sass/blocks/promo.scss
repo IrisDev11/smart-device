@@ -6,7 +6,7 @@
 
   color: $color-alice-blue;
 
-  background-color: $color-black-pearl;
+  background-color: $color-bg-darkblue;
   background-image: $black-to-bottom-index,
     url("../img/bg-index-desktop.jpg");
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
   @include vp-769 {
     min-height: 560px;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
 
     background-image: $black-to-bottom-index,
       url("../img/bg-index-mobile.jpg");

@@ -1,11 +1,8 @@
 .container {
   width: 100%;
-  max-width: 1222px;
+  max-width: 1282px;
   margin: 0 auto;
-
-  @include vp-1439 {
-    padding: 0 30px;
-  }
+  padding: 0 30px;
 
   @include vp-1023 {
     padding: 0 50px;
@@ -13,5 +10,11 @@
 
   @include vp-769 {
     padding: 0 25px;
+  }
+}
+
+.container--footer {
+  @include vp-769 {
+    padding: 0;
   }
 }

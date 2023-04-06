@@ -1,18 +1,40 @@
 .accordion {
+  max-width: 846px;
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
 
-  &__element.is-active > &__button {
-    opacity: 0.5;
-  }
-
   &__toogle {
+    position: relative;
     padding-top: 4px;
+
+    @include vp-769 {
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 32px;
+        right: 27px;
+        width: 15px;
+        height: 1px;
+        background-color: $color-alice-grey;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 32px;
+        right: 27px;
+        width: 15px;
+        height: 1px;
+        transform: rotate(90deg);
+        background-color: $color-alice-grey;
+      }
+    }
   }
 
   &__button {
-    position: relative;
     width: 100%;
     padding: 0;
     margin: 0 0 20px 0;
@@ -36,38 +58,24 @@
       margin-bottom: 17px;
 
       cursor: pointer;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 27px;
-        right: 25px;
-        width: 15px;
-        height: 1px;
-        background-color: $color-alice-grey;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 27px;
-        right: 25px;
-        width: 15px;
-        height: 1px;
-        transform: rotate(90deg);
-        background-color: $color-alice-grey;
-      }
     }
+  }
+
+  &__element.is-active > &__toogle {
+    opacity: 0.5;
+  }
+
+  &__element.is-active > &__toogle::after {
+    display: none;
   }
 
   @include vp-1023 {
     width: 100%;
-    padding: 0 50px;
   }
 
   @include vp-769 {
     flex-direction: column;
+
     border-bottom: 1px solid $color-transparent-grey;
-    padding: 0;
   }
 }

@@ -1,19 +1,21 @@
 .features {
-  width: 100%;
-  max-width: 1222px;
-  margin: 0 auto 90px auto;
-
-  @include vp-1439 {
-    padding: 0 30px;
-  }
+  margin-bottom: 90px;
 
   @include vp-1023 {
     margin-bottom: 45px;
-    padding: 0 54px 0 46px;
   }
 
   @include vp-769 {
     margin-bottom: 18px;
+  }
+}
+
+.features .container {
+  @include vp-1023 {
+    padding: 0 54px 0 46px;
+  }
+
+  @include vp-769 {
     padding: 0 25px;
   }
 }
@@ -29,7 +31,7 @@
 }
 
 .features__item {
-  width: 48.8%;
+  width: 48.7%;
   min-height: 300px;
   margin-bottom: 30px;
   padding: 40px 40px;
@@ -44,7 +46,7 @@
   }
 
   @include vp-1023 {
-    width: 47.7%;
+    width: 47.9%;
     min-height: 360px;
     padding: 40px 6% 28px;
   }

@@ -12,18 +12,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 1220px;
-  margin: 0 auto;
-  padding: 30px 60px 35px 0;
-
-  @include vp-1279 {
-    max-width: 1220px;
-    width: 99%;
-  }
+  padding: 30px 62px 35px 0;
 
   @include vp-1023 {
     width: 100%;
-    padding: 20px 15px 25px 0;
+    padding: 20px 0 25px 0;
   }
 
   @include vp-769 {
@@ -32,8 +25,9 @@
 }
 
 .header__button {
+  flex-shrink: 2;
   max-width: 200px;
-  padding: 10px 16px 11px;
+  padding: 10px 16px 12px 17px;
   margin-top: 5px;
   margin-bottom: auto;
 
@@ -55,9 +49,5 @@
 }
 
 .header__logo {
-  margin-right: 3%;
-
-  @include vp-1279 {
-    margin-right: 1%;
-  }
+  display: block;
 }

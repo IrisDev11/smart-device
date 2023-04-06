@@ -1,23 +1,27 @@
-.about-company {
+.about-company__wrapper {
   display: grid;
   grid-template-columns: auto auto;
   gap: 8.2%;
-  max-width: 1220px;
-  margin: 0 auto 100px auto;
-
-  @include vp-1439 {
-    padding: 0 30px;
-  }
+  margin-bottom: 100px;
 
   @include vp-1023 {
     gap: 4.2%;
     margin-bottom: 80px;
-    padding: 0 54px 0 46px;
   }
 
   @include vp-769 {
     display: block;
     padding: 0 25px;
+  }
+}
+
+.about-company .container {
+  @include vp-1023 {
+    padding: 0 54px 0 46px;
+  }
+
+  @include vp-769 {
+    padding: 0;
   }
 }
 
@@ -43,6 +47,8 @@
   margin: 0 0 20px 0;
 
   @include vp-769 {
+    margin-bottom: 19px;
+
     font-size: 14px;
     line-height: 19px;
   }

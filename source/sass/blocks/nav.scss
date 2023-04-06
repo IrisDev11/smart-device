@@ -1,22 +1,32 @@
 .nav {
+  @include vp-1023 {
+    max-width: 235px;
+  }
+
   @include vp-769 {
     padding: 0 25px 20px;
   }
 }
 
 .nav__list {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  row-gap: 8px;
-  column-gap: 49px;
   margin: 0;
   padding: 0;
 
   list-style: none;
 
-  @media (max-width: ($vp-1024 - 24px)) {
-    grid-template-columns: auto;
+  columns: 2;
+  column-width: 235px;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 220px;
+    height: 22px;
   }
+}
+
+.nav__item {
+  margin-bottom: 8px;
 }
 
 .nav__title {
@@ -48,43 +58,5 @@
 
   &:active {
     opacity: 0.3;
-  }
-}
-
-.nav__item--montage {
-  order: 5;
-
-  @media (max-width: ($vp-1024 - 24px)) {
-    order: 4;
-  }
-}
-
-.nav__item--products {
-  order: 2;
-}
-
-.nav__item--production {
-  order: 3;
-}
-
-.nav__item--contacts {
-  order: 4;
-
-  @media (max-width: ($vp-1024 - 24px)) {
-    order: 7;
-  }
-}
-
-.nav__item--delivery {
-  order: 2;
-
-  @media (max-width: ($vp-1024 - 24px)) {
-    order: 6;
-  }
-}
-
-.nav__item--accessories {
-  @media (max-width: ($vp-1024 - 24px)) {
-    order: 5;
   }
 }
