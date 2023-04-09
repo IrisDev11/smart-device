@@ -1,11 +1,11 @@
-import {initPhoneInput} from './init-tel-input';
+import {createsMaskPhone} from './creates-mask-phone';
 
-const modalPhone = document.querySelector('.js-modal-phone');
-const feedbackPhone = document.querySelector('.js-feedback-phone');
+const modalPhone = document.querySelector('#modal-tel');
+const feedbackPhone = document.querySelector('#feedback-tel');
 
 const validateInputPhone = () => {
-  initPhoneInput(modalPhone);
-  initPhoneInput(feedbackPhone);
+  createsMaskPhone(modalPhone);
+  createsMaskPhone(feedbackPhone);
 };
 
 export {validateInputPhone};

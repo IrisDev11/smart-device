@@ -6,6 +6,7 @@ import {initSmothScroll} from './modules/smoth-scroll';
 import {initFocus} from './modules/init-focus';
 import {validateInputPhone} from './modules/validate-input-phone';
 
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -28,10 +29,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initSmothScroll();
     initFocus();
     validateInputPhone();
-
-    // const form = new Form();
-    // window.form = form;
-    // form.init();
   });
 });
 

@@ -217,11 +217,11 @@
         </div>
       </section>
       <section class="feedback" id="form-feedback">
-        <div class="container container--footer">
+        <div class="container">
           <div class="feedback__wrapper">
             <picture>
               <source type="image/webp" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
-              <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510" height="285" alt="">
+              <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" loading="lazy" width="510" height="285" alt="">
             </picture>
             <div class="feedback__form-wrapper">
               <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
@@ -232,7 +232,7 @@
                     <input type="text" name="feedback-name" id="feedback-name" placeholder="Имя" aria-label="Имя"
                       required>
                   </div>
-                  <div class="feedback__input form__input form__input-tel js-feedback-phone">
+                  <div class="feedback__input form__input form__input-tel">
                     <input type="tel" name="feedback-tel" id="feedback-tel" placeholder="Телефон" aria-label="Телефон"
                       required>
                   </div>
@@ -374,8 +374,8 @@
                 <div class="form__input form__input-name">
                   <input type="text" name="user-name" id="modal-user-name" placeholder="Имя" aria-label="Имя" required>
                 </div>
-                <div class="form__input form__form-tel js-modal-phone">
-                  <input type="tel" name="user-tel" id="tel" placeholder="Телефон" aria-label="Телефон" required>
+                <div class="form__input form__form-tel">
+                  <input type="tel" name="user-tel" id="modal-tel" placeholder="Телефон" aria-label="Телефон" required>
                 </div>
                 <div class="form__textarea">
                   <textarea name="question" id="question" placeholder="Ваш вопрос" aria-label="Ваш вопрос"></textarea>
