@@ -110,6 +110,7 @@
 
 .form__checkbox-approval label {
   position: relative;
+  display: block;
 
   font-size: 14px;
   line-height: 16px;
@@ -152,24 +153,6 @@
   @include active {
     opacity: 0.5;
   }
-}
-
-.form__input .input-message {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  padding: 5px;
-
-  background-color: $color-transparent-white;
-  border-radius: 3px;
-}
-
-.form__input .input-message.is-invalid {
-  font-family: $ff-roboto;
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: lowercase;
-  color: #ff0000;
 }
 
 .form__checkbox-approval input:checked + label::before {

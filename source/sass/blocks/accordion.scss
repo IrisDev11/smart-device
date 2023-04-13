@@ -51,6 +51,7 @@
 
     background-color: transparent;
     border: none;
+    outline: none;
 
     @include vp-769 {
       padding: 22px 25px 0;
@@ -58,6 +59,10 @@
       margin-bottom: 17px;
 
       cursor: pointer;
+
+      @include hover-focus {
+        opacity: 0.3;
+      }
     }
   }
 

@@ -221,7 +221,8 @@
           <div class="feedback__wrapper">
             <picture>
               <source type="image/webp" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
-              <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" loading="lazy" width="510" height="285" alt="">
+              <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" loading="lazy" width="510"
+                height="285" alt="Фоновое изображение белый самолет.">
             </picture>
             <div class="feedback__form-wrapper">
               <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
@@ -242,15 +243,14 @@
                     aria-label="Ваш вопрос"></textarea>
                 </div>
                 <div class="feedback__bottom-wrapper">
-                  <button class="feedback__button form__button" type="submit">Задать вопрос</button>
                   <div class="feedback__checkbox-approval form__checkbox-approval">
                     <input class="visually-hidden" type="checkbox" name="feedback-approval" id="feedback-approval"
                       checked required>
                     <label for="feedback-approval">
-                      <span>Я&nbsp;согласен на&nbsp;обработку</span>
-                      <span class="feedback__approval-span">&nbsp;персональных данных</span>
+                      <span>Я&nbsp;согласен на&nbsp;обработку<br>персональных данных</span>
                     </label>
                   </div>
+                  <button class="feedback__button form__button" type="submit">Задать вопрос</button>
                 </div>
               </form>
             </div>
@@ -372,21 +372,26 @@
             <div>
               <form class="form" action="https://echo.htmlacademy.ru/" method="post">
                 <div class="form__input form__input-name">
-                  <input type="text" name="user-name" id="modal-user-name" placeholder="Имя" aria-label="Имя" required>
+                  <input type="text" name="user-name" id="modal-user-name" placeholder="Имя" aria-label="Имя" required
+                    tabindex="1">
                 </div>
                 <div class="form__input form__form-tel">
-                  <input type="tel" name="user-tel" id="modal-tel" placeholder="Телефон" aria-label="Телефон" required>
+                  <input type="text" name="user-tel" id="modal-tel" placeholder="Телефон" aria-label="Телефон" required
+                    tabindex="2">
                 </div>
                 <div class="form__textarea">
-                  <textarea name="question" id="question" placeholder="Ваш вопрос" aria-label="Ваш вопрос"></textarea>
+                  <textarea name="question" id="question" placeholder="Ваш вопрос" aria-label="Ваш вопрос"
+                    tabindex="3"></textarea>
                 </div>
-                <button class="form__button" type="submit">Отправить</button>
+                <button class="form__button" type="submit" tabindex="5">Отправить</button>
                 <div class="form__checkbox-approval">
-                  <input class="visually-hidden" type="checkbox" name="data" id="approval" checked required>
+                  <input class="visually-hidden" type="checkbox" name="data" id="approval" checked required
+                    tabindex="4">
                   <label for="approval">Я&nbsp;согласен на&nbsp;обработку &nbsp;персональных данных</label>
                 </div>
               </form>
-              <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+              <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal
+                tabindex="6">
                 <svg width="40" height="40">
                   <use xlink:href="img/sprite.svg#icon-close"></use>
                 </svg>

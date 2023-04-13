@@ -4,7 +4,7 @@ import {initAccordions} from './modules/accordion/init-accordion';
 import {switchesHiddenText} from './modules/about-company-switch-text';
 import {initSmothScroll} from './modules/smoth-scroll';
 import {initFocus} from './modules/init-focus';
-import {validateInputPhone} from './modules/validate-input-phone';
+import {validatePhone} from './modules/validate-phone';
 
 
 // ---------------------------------
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initSmothScroll();
     initFocus();
-    validateInputPhone();
+    validatePhone();
   });
 });
 
