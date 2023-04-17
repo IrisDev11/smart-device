@@ -1783,11 +1783,12 @@ button,
   }
 
   .address__link:not(:nth-child(2n)) {
-    margin-right: 25px;
+    margin-right: 0;
   }
 
   .address__link {
     width: auto;
+    margin-left: 25px;
   }
 
   .address__content {

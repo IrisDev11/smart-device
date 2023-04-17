@@ -8,9 +8,9 @@ const validatePhone = () => {
   createsMaskPhone(feedbackPhone);
 
   const validateInputValue = (input) => {
-    input.addEventListener('change', () => {
+    input.addEventListener('input', () => {
       let phoneValue = input.value.length;
-      if (phoneValue !== 16) {
+      if (phoneValue < 16) {
         input.setCustomValidity('Введите номер телефона полностью.');
       } else {
         input.setCustomValidity('');

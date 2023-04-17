@@ -5,6 +5,7 @@ import {switchesHiddenText} from './modules/about-company-switch-text';
 import {initSmothScroll} from './modules/smoth-scroll';
 import {initFocus} from './modules/init-focus';
 import {validatePhone} from './modules/validate-phone';
+import {deleteFocus} from './modules/delete-focus';
 
 
 // ---------------------------------
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
 
+    deleteFocus();
     switchesHiddenText();
     initAccordions();
     initModals();
